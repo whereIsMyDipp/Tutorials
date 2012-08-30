@@ -1,7 +1,33 @@
-@(message: String)
+@main("Blogs") {
+<form class="navbar-form pull-right">
+	<input class="span2" type="text" placeholder="Email"> <input
+		class="span2" type="password" placeholder="Password">
+	<button type="submit" class="btn">Sign in</button>
+</form>
+<!-- Main hero unit for a primary marketing message or call to action -->
+<br>
+<div class="hero-unit">
+	<h1>Our Blog Tutorial</h1>
+	<p>How we create a simple Blog</p>
+</div>
 
-@main("Welcome to Play 2.0") {
-    
-    @play20.welcome(message, style = "Java")
-    
+<!-- Example row of columns -->
+<div class="row">
+	<div class="span12">
+		<h2>Blogentry 1</h2>
+		<p>Donec id elit non mi porta gravida at eget metus. Fusce
+			dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+			fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+			mollis euismod. Donec sed odio dui.</p>
+		<blockquote>
+			<p>LComment 1</p>
+			<small>By Person1</small>
+		</blockquote>
+		<blockquote>
+			<p>LComment 2</p>
+			<small>By Person2</small>
+		</blockquote>
+	</div>
+</div>
+
 }
