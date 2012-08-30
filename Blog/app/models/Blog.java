@@ -15,6 +15,9 @@ public class Blog extends Model {
 	public Long id;
 
 	@Constraints.Required
+	public String header;
+	
+	@Constraints.Required
 	public String text;
 	
 	public Date created;
@@ -26,8 +29,8 @@ public class Blog extends Model {
 			Long.class, Blog.class);
 	
 	public static List<Blog> getAllBlogs() {
-		List<Blog> menus = new ArrayList<Blog>();
-		menus = Ebean.find(Blog.class).findList(); 
-		return menus; 
+		List<Blog> blogs = new ArrayList<Blog>();
+		blogs = Ebean.find(Blog.class).findList(); 
+		return blogs; 
 	}
 }
