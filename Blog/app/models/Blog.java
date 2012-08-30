@@ -30,7 +30,9 @@ public class Blog extends Model {
 	
 	public static List<Blog> getAllBlogs() {
 		List<Blog> blogs = new ArrayList<Blog>();
-		blogs = Ebean.find(Blog.class).findList(); 
+		blogs = Ebean.find(Blog.class)
+				.fetch("comments")
+				.findList(); 
 		return blogs; 
 	}
 }
