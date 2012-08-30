@@ -17,14 +17,12 @@
 	<div class="span12">
 		<h2>@blog.header</h2>
 		<p>@blog.text</p>
+		@for(comment <- blog.comments) {
 		<blockquote>
-			<p>LComment 1</p>
-			<small>By Person1</small>
+			<p>@comment.text</p>
+			<small>By a random Person</small>
 		</blockquote>
-		<blockquote>
-			<p>LComment 2</p>
-			<small>By Person2</small>
-		</blockquote>
+		}
 	</div>
 	}
 </div>

@@ -20,7 +20,7 @@ public class Comment extends Model {
 	@ManyToOne
 	public Blog blog;
 	
-	public Date created;
+	//public Date created;
 	
 	public static Model.Finder<Long, Comment> find = new Model.Finder<Long, Comment>(
 			Long.class, Comment.class);

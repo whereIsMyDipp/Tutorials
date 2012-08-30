@@ -18,9 +18,10 @@ public class Blog extends Model {
 	public String header;
 	
 	@Constraints.Required
+	@Column(columnDefinition="TEXT")
 	public String text;
 	
-	public Date created;
+	//public Date created;
 	
 	@OneToMany
 	public List<Comment> comments;
@@ -31,7 +32,6 @@ public class Blog extends Model {
 	public static List<Blog> getAllBlogs() {
 		List<Blog> blogs = new ArrayList<Blog>();
 		blogs = Ebean.find(Blog.class)
-				.fetch("comments")
 				.findList(); 
 		return blogs; 
 	}
